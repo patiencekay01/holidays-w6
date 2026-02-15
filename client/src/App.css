@@ -51,3 +51,16 @@ html, body, #root {
   border: 3px solid rgb(8, 8, 8);
   opacity: 1;
 }
+
+@media (max-width: 400px) {
+
+  .thumbnails {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .thumbnails img {
+    height: 55px;
+  }
+
+}
