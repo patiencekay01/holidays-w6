@@ -8,6 +8,11 @@ return (
         alt={photo.alt_description || "Holiday destination"}
         onClick={() => onImageClick(index)}
         className={index === currentIndex ? "active" : ""}
+        tabIndex={0}
+        onKeyDown={(e) => {
+            onImageClick(index)
+        }
+    }
         />
         ))}
       </div>
