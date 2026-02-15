@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
 import './App.css'
+import BackgroundImage from './components/BackgroundImage'
+import ThumbnailBar from './components/ThumbnailBar'
 
 export default function App() {
 
@@ -24,26 +26,16 @@ export default function App() {
 
   return (
     <div className="photos"> 
-    {photos.length > 0 && (
-      <div className='background-image'
-      style={{
-        backgroundImage:`url(${photos[currentIndex].urls.regular})`,
-        backgroundSize: "cover"
-      }}
-     /> 
-    )}
-
-    <div className="thumbnails"> 
-    {photos.map ((photo, index) => (
-      <img key={photo.id}
-        src={photo.urls.small} 
-        alt={photo.alt_description || "Holiday destination"}
-        onClick={() => handleClick(index)}
-        className={index === currentIndex ? "active" : ""}
-        />
-        ))}
-      </div>
-      </div>
+      {photos.length > 0 && (
+      <BackgroundImage photo={photos[currentIndex]} />
+      )}
+      
+    <ThumbnailBar 
+      photos={photos}
+      currentIndex={currentIndex}
+      onImageClick={handleClick}
+    /> 
+    </div>
     );
   }
  
