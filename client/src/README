@@ -1,0 +1,14 @@
+Introduction:
+A responsive image gallery of holiday destinations built with React. Users can browse thumbnails by clicking or using their keyboard to make the image the background. Images are displayed using an external Unsplash API.
+
+Technologies used:
+•	React
+•	Unsplash API
+•	CSS
+•	JavaScript
+
+Reflection:
+I chose to use the Unsplash API directly instead of a pre-built API—mostly because frogs make my skin crawl. This decision meant extra time setting up API calls, handling keys, and managing responses. I originally searched for a free API that randomly generates holiday destinations but hit a wall, so Unsplash became the reliable fallback.
+While this project should have been easier because it is a redo of a previous project, but I actually found this much harder. I struggled to recall previous steps, to decide which logic still applied, and which to disregard, while also incorporating new processes in this. 
+However, this time around, the logic made more sense, and less of a struggle with syntax. However, splitting code into separate components (App, BackgroundImage, ThumbnailBar) felt unnatural after months of single-file code. Because of this, I initially wrote all of my code in one App.jsx file, then later separated them into components. 
+I did have some trouble with displaying the background image and thumbnail due to the container, which took a while to sort the dimensions and document flow. From this, I have gained greater understanding in component structuring.

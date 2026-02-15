@@ -29,7 +29,7 @@ export default function App() {
       {photos.length > 0 && (
       <BackgroundImage photo={photos[currentIndex]} />
       )}
-      
+
     <ThumbnailBar 
       photos={photos}
       currentIndex={currentIndex}
