@@ -10,7 +10,7 @@ export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0)
   
   async function fetchCollection() {
-    const res = await fetch("http://localhost:3000/api/unsplash/collection?id=qeQURMsKYh0");
+    const res = await fetch("https://holidays-w6-server.onrender.com/api/unsplash/collection?id=qeQURMsKYh0");
     const data = await res.json();
 
     setPhotos(data)
